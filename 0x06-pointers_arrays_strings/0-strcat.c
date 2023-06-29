@@ -1,20 +1,25 @@
 #include "main.h"
-/**
- * _memset - fill a block of memory with a specific value
- * @s: starting address of memory to be filled
- * @b: the desired value
- * @n: number of bytes to be changed
- *
- * Return: changed array with new value for n bytes
- */
-char *_memset(char *s, char b, unsigned int n)
-{
-	int i = 0;
+#include <stdio.h>
 
-	for (; n > 0; i++)
+/**
+ * *_strcat - appends the src string to the dest string
+ *
+ * @dest: char to check
+ * @src: char to check
+ * Description: This will append the src string to the dest string
+ * Return: a pointer to the resulting string dest
+ */
+char *_strcat(char *dest, char *src)
+{
+	int i, j;
+
+	for (i = 0; dest[i] != '\0'; i++)
 	{
-	s[i] = b;
-	n--;
 	}
-	return (s);
+	for (j = 0; src[j] != '\0'; j++, i++)
+	{
+		dest[i] = src[j];
+	}
+
+	return (dest);
 }
